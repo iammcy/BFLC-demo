@@ -22,6 +22,14 @@
 
 - cmake >= 3.10
 
+- pandas == 1.2.3
+
+- numpy == 1.19.2
+
+- matplotlib == 3.3.4
+
+- sklearn == 0.24.1
+
   
 
 ### 预编译合约准备
@@ -101,6 +109,7 @@ add_subdirectory(libnlohmann_json)
 *<working_dir>/FISCO-BCOS/libprecompiled/CMakeLists.txt*
 
 ```cmake
+# 在target_link_libraries命令中增加nlohmann_json目标链接库，其中“...”代表其他目标链接库
 target_link_libraries(precompiled PRIVATE ... nlohmann_json)
 ```
 
@@ -184,10 +193,13 @@ bash nodes/127.0.0.1/stop_all.sh
 sudo apt install -y zlib1g-dev libffi6 libffi-dev wget git
 ```
 
-##### 拉取源代码
+##### 拉取官方源代码
 
 ```shell
+# 第一步：
 git clone https://github.com/FISCO-BCOS/python-sdk
+# 第二步：
+# 在官方源代码中增加本项目中python-sdk文件夹下相关文件到相应的地方
 ```
 
 ##### 配置环境
@@ -210,11 +222,8 @@ source ~/.bashrc && pyenv activate python-sdk && pip install --upgrade pip
 
 ##### 安装依赖
 
-本项目使用conda安装
-
 ```shell
-# pip install -r requirements.txt
-conda install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 ##### 初始化配置
