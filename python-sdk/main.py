@@ -50,7 +50,7 @@ def split_data(path, clients_num):
 
 # 划分客户端数据集
 CLIENT_NUM = 20
-X_train, X_test, y_train, y_test = split_data("../data/datatraining.txt", CLIENT_NUM)
+X_train, X_test, y_train, y_test = split_data("./data/datatraining.txt", CLIENT_NUM)
 
 manager = Manager()
 
