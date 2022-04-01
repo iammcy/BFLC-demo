@@ -447,7 +447,7 @@ void CommitteePrecompiled::Aggregate(Table::Ptr table, Address const& _origin, P
         if(client.second == "comm")
             client.second = "trainer";
     }
-    for(int k=0; k<AGGREGATE_COUNT; k++){
+    for(int k=0; k<COMM_COUNT; k++){
         auto trainer = scores_vec[k].first;
         roles[trainer] = "comm";
     }
