@@ -14,7 +14,7 @@
 
 - 系统环境：Ubuntu 20.04.1 LTS
 
-- FISCO-BCOS >= 2.0.0
+- **FISCO-BCOS == 2.x**
 
 - python == 3.6.3、3.7.x
 
@@ -37,7 +37,7 @@
 #### 1. 下载FISCO-BCOS源码
 
 ```shell
-git clone https://github.com/FISCO-BCOS/FISCO-BCOS.git
+git clone -b master-2.0 https://github.com/FISCO-BCOS/FISCO-BCOS.git
 ```
 
 #### 2. 嵌入预编译合约
